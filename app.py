@@ -611,7 +611,8 @@ def home():
         prefs_saved=prefs_saved,
         show_pref_form=show_pref_form,
         default_tab=request.args.get('tab', 'tasks'),
-        format_hours=format_hours
+        format_hours=format_hours,
+        range=range
     )
 
 @app.route('/generate', methods=['POST'])
@@ -640,7 +641,8 @@ def generate():
         prefs_saved=False,
         show_pref_form=False,
         default_tab='tasks',
-        format_hours=format_hours
+        format_hours=format_hours,
+        range=range
     )
 
 @app.route('/save_schedule', methods=['POST'])
